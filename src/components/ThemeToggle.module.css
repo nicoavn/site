@@ -1,0 +1,31 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color var(--ease), background var(--ease), transform var(--ease);
+}
+
+.toggle:hover {
+  border-color: var(--magenta);
+  transform: translateY(-1px);
+}
+
+.toggle svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle:hover {
+    transform: none;
+  }
+}

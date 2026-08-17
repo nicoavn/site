@@ -1,0 +1,41 @@
+.grid {
+  display: grid;
+  gap: 1.5rem 3rem;
+}
+
+.summary {
+  max-width: 62ch;
+  font-size: 1.08rem;
+}
+
+.highlights {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.45rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+}

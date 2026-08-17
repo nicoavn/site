@@ -1,0 +1,39 @@
+.footer {
+  margin-top: 5rem;
+  padding: 2.25rem 0 2.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.25rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.meta {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}

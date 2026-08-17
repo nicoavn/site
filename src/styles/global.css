@@ -1,0 +1,235 @@
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f7f6fb;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --navy: #1a2a72;
+  --magenta: #c2186a;
+  --magenta-hot: #e23d8a;
+  --text: #161821;
+  --text-muted: #5c6478;
+  --border: rgba(22, 24, 33, 0.1);
+  --border-strong: rgba(22, 24, 33, 0.18);
+  --shadow: 0 18px 40px rgba(26, 42, 114, 0.08);
+  --header-bg: rgba(247, 246, 251, 0.9);
+  --chip-fg: #1a2a72;
+  --chip-bg: rgba(26, 42, 114, 0.06);
+  --glow-magenta: rgba(226, 61, 138, 0.14);
+  --glow-navy: rgba(26, 42, 114, 0.12);
+  --name-gradient: linear-gradient(105deg, #1a2a72 0%, #3a4bb5 36%, #c2186a 72%, #e23d8a 100%);
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --max: 1120px;
+  --header-h: 4.5rem;
+  --radius: 1rem;
+  --ease: 180ms ease;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #07070b;
+  --bg-elevated: #101018;
+  --bg-card: #0c0c14;
+  --navy: #1a2a72;
+  --magenta: #e23d8a;
+  --magenta-hot: #ff4fa3;
+  --text: #f3f4f8;
+  --text-muted: #9aa3b8;
+  --border: rgba(243, 244, 248, 0.1);
+  --border-strong: rgba(243, 244, 248, 0.18);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --header-bg: rgba(7, 7, 11, 0.88);
+  --chip-fg: #f3f4f8;
+  --chip-bg: rgba(226, 61, 138, 0.08);
+  --glow-magenta: rgba(226, 61, 138, 0.12);
+  --glow-navy: rgba(26, 42, 114, 0.45);
+  --name-gradient: linear-gradient(105deg, #8ea2ff 0%, #c9d2ff 32%, #e23d8a 68%, #ff6fb3 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 0.75rem);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
+  background-image:
+    radial-gradient(1200px 600px at 85% -10%, var(--glow-magenta), transparent 55%),
+    radial-gradient(900px 500px at -10% 10%, var(--glow-navy), transparent 50%);
+  background-attachment: fixed;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--magenta-hot);
+}
+
+:focus-visible {
+  outline: 2px solid var(--magenta);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+.btn {
+  font: inherit;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--magenta);
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+.wrap {
+  width: min(var(--max), calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 5.5rem 0 1rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+.sectionTitle {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--chip-fg);
+  background: var(--chip-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+}
+
+.btnRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  transition: transform var(--ease), background var(--ease), border-color var(--ease);
+}
+
+.btn:hover {
+  color: inherit;
+  transform: translateY(-1px);
+}
+
+.btnPrimary {
+  background: linear-gradient(120deg, var(--navy), var(--magenta));
+  color: #fff;
+}
+
+.btnGhost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.btnGhost:hover {
+  border-color: var(--magenta);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
