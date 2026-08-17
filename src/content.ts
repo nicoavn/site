@@ -50,7 +50,7 @@ export const site = {
   location: "Santo Domingo Este, Dominican Republic",
   availability: "Available immediately · Open to remote (US/EU)",
   url: "https://alvinduran.com",
-  email: "hello@alvinduran.com",
+  email: "nicoavn@gmail.com",
   resumeHref: "/Alvin_Duran_Resume.pdf",
   github: "https://github.com/nicoavn",
   linkedin: "https://www.linkedin.com/in/alvinod",
