@@ -29,17 +29,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     applyTheme(theme);
   }, [theme]);
 
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = () => {
-      if (!localStorage.getItem(STORAGE_KEY)) {
-        setTheme(media.matches ? "dark" : "light");
-      }
-    };
-    media.addEventListener("change", onChange);
-    return () => media.removeEventListener("change", onChange);
-  }, []);
-
   const value = useMemo(
     () => ({
       theme,

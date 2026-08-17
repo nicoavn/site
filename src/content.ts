@@ -121,7 +121,7 @@ export const caseStudies: CaseStudy[] = [
     role: "Senior Full Stack Engineer (Consultant)",
     dates: "Feb 2023 – Nov 2024",
     narrative:
-      "Shipped frontend and backend work for U.S. product teams across lending, circular-economy marketplaces, and integration-heavy clients—modular UI, OpenAPI services, and automated test suites.",
+      "Shipped frontend and backend work for U.S. product teams across lending and integration-heavy clients—modular UI, OpenAPI services, and automated test suites.",
     outcomes: [],
     stack: [
       "React",
@@ -129,7 +129,7 @@ export const caseStudies: CaseStudy[] = [
       "Node.js",
       "Koa",
       "OpenAPI 3",
-      "Django",
+      "Storybook",
       "Playwright",
       "Cypress",
       "Alembic",
@@ -140,14 +140,21 @@ export const caseStudies: CaseStudy[] = [
         body: "Engineered core frontend and backend services for a B2B lending portal using React, TypeScript, Node.js (Koa), and OpenAPI 3. Built modular UI components in Storybook.",
       },
       {
-        name: "Circular.co",
-        body: "Developed B2B marketplace functionality connecting recycled plastics suppliers and buyers using React/TypeScript and Python/Django.",
-      },
-      {
         name: "Studproof & marketplace clients",
         body: "Developed asynchronous backend services, integration suites (Playwright, Cypress), and Google Photos SDK workflows. Managed database migrations via Alembic.",
       },
     ],
+  },
+  {
+    id: "circular",
+    company: "Circular.co",
+    location: "U.S.",
+    role: "Senior Full Stack Engineer",
+    dates: "Feb 2023 – Nov 2024",
+    narrative:
+      "Developed B2B marketplace functionality connecting recycled plastics suppliers and buyers, spanning the React/TypeScript frontend and Python/Django backend.",
+    outcomes: [],
+    stack: ["React", "TypeScript", "Python", "Django"],
   },
   {
     id: "level12",
@@ -286,11 +293,17 @@ export const timeline: TimelineItem[] = [
       "E-commerce orchestration, LLM catalog pipelines, Amazon/Shopify sync.",
   },
   {
+    company: "Circular.co",
+    role: "Senior Full Stack Engineer",
+    dates: "Feb 2023 – Nov 2024",
+    summary:
+      "B2B marketplace connecting recycled plastics suppliers and buyers.",
+  },
+  {
     company: "FullStack Labs",
     role: "Senior Full Stack Engineer (Consultant)",
     dates: "Feb 2023 – Nov 2024",
-    summary:
-      "B2B lending, circular-economy marketplace, and integration suites.",
+    summary: "B2B lending portal and integration suites.",
   },
   {
     company: "Level12",
